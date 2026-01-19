@@ -97,11 +97,11 @@ class Sidebar(Static):
         with Vertical(classes="sidebar-section"):
             yield Label("Menu", classes="section-title")
             yield ListView(
-                SidebarItem("Home", "home", "🏠", "nav"),
-                SidebarItem("Search", "search", "🔍", "nav"),
-                SidebarItem("Library", "library", "📚", "nav"),
-                SidebarItem("Recently Played", "recent", "🕐", "nav"),
-                SidebarItem("Devices", "devices", "📱", "nav"),
+                SidebarItem("Home", "home", "⌂", "nav"),
+                SidebarItem("Search", "search", "○", "nav"),
+                SidebarItem("Library", "library", "▤", "nav"),
+                SidebarItem("Recently Played", "recent", "◷", "nav"),
+                SidebarItem("Devices", "devices", "▣", "nav"),
                 id="nav-list",
             )
 
@@ -109,9 +109,9 @@ class Sidebar(Static):
         with Vertical(classes="sidebar-section"):
             yield Label("Your Library", classes="section-title")
             yield ListView(
-                SidebarItem("Liked Songs", "liked", "♥", "library"),
-                SidebarItem("Saved Albums", "albums", "💿", "library"),
-                SidebarItem("Following", "artists", "👤", "library"),
+                SidebarItem("Liked Songs", "liked", "♡", "library"),
+                SidebarItem("Saved Albums", "albums", "◉", "library"),
+                SidebarItem("Following", "artists", "☆", "library"),
                 id="library-list",
             )
 
