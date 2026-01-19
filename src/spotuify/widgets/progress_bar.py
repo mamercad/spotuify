@@ -4,6 +4,7 @@ from textual.app import ComposeResult
 from textual.widgets import Static, Label, ProgressBar
 from textual.containers import Horizontal
 from textual.reactive import reactive
+from textual.message import Message
 from textual import events
 
 from ..utils.formatting import format_duration
@@ -101,7 +102,7 @@ class PlaybackProgress(Static):
             # Post a seek event
             self.post_message(self.Seek(seek_position))
 
-    class Seek(Static.Message):
+    class Seek(Message):
         """Message posted when user seeks to a position."""
 
         def __init__(self, position_ms: int) -> None:

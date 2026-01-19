@@ -4,6 +4,7 @@ from textual.app import ComposeResult
 from textual.widgets import Static, Label, ProgressBar, Button
 from textual.containers import Horizontal
 from textual.reactive import reactive
+from textual.message import Message
 from textual import events
 from rich.text import Text
 
@@ -114,7 +115,7 @@ class VolumeBar(Static):
             self.set_volume(percentage)
             self.post_message(self.VolumeChanged(self.volume))
 
-    class VolumeChanged(Static.Message):
+    class VolumeChanged(Message):
         """Message posted when volume changes."""
 
         def __init__(self, volume: int) -> None:

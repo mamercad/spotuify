@@ -54,7 +54,6 @@ class Sidebar(Static):
         text-style: bold;
         color: $text-muted;
         padding: 0 0 1 0;
-        text-transform: uppercase;
     }
 
     Sidebar ListView {
@@ -110,7 +109,7 @@ class Sidebar(Static):
         with Vertical(classes="sidebar-section"):
             yield Label("Your Library", classes="section-title")
             yield ListView(
-                SidebarItem("Liked Songs", "liked", "❤️", "library"),
+                SidebarItem("Liked Songs", "liked", "♥", "library"),
                 SidebarItem("Saved Albums", "albums", "💿", "library"),
                 SidebarItem("Following", "artists", "👤", "library"),
                 id="library-list",
